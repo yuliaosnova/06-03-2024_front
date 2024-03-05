@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--header-bg);
+  width: 100%;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  height: 100%;
+}
+
+.nav_item {
+  color: var(--secondary-txt-cl);
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+
+  &:first-child {
+    padding-left: 10px;
+  }
+}
+
+main {
+	padding: 20px;
+	/* margin:  0 auto; */
+	/* display: flex; */
+	/* align-items: center; */
+	/* justify-content: center; */
+}
+
+/* .dna-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+} */
