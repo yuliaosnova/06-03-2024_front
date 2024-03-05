@@ -1,0 +1,11 @@
+.drugs_section {
+	width: 700px;
+	overflow-y: scroll;
+}
+
+.drug_list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 20px;
+}

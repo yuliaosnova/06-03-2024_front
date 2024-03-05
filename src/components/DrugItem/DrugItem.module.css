@@ -1,0 +1,39 @@
+.drug_item {
+
+}
+
+.image{
+	/* width: 250px; */
+	/* height: 100px; */
+}
+
+.drug_info {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+.drug_buttons {
+	display: flex;
+	justify-content: space-between;
+}
+
+.fav_btn {
+	border: none;
+	background-color: transparent;
+}
+
+.heart_icon {
+	fill: transparent;
+	stroke: var(--accent-cl);
+}
+
+.heart_icon_fav {
+	fill: var(--accent-cl)
+}
+
+.add_btn {
+	background-color: var(--active-bg);
+	color: var(--secondary-txt-cl);
+	border: none;
+}

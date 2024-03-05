@@ -7,7 +7,6 @@ export async function fetchShops() {
 
 export async function fetchDrugs() {
   const response = await axios.get(`/drugs`);
-  console.log("drugs:", response);
   return response;
 }
 

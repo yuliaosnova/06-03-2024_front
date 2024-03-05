@@ -6,15 +6,6 @@ const Shops = () => {
   const [shops, setShops] = useState([]);
   const [currentShop, setCurrentShop] = useState(null);
 
-  const onShop = (name) => {
-    setCurrentShop(name);
-  };
-
-  const isCurrent = (name) => {
-    if (name === currentShop) return true;
-    else return false;
-  };
-
   useEffect(() => {
     api
       .fetchShops()
@@ -27,17 +18,26 @@ const Shops = () => {
       });
   }, []);
 
+  const onShopClick = (name) => {
+    setCurrentShop(name);
+  };
+
+  const isCurrent = (name) => {
+    if (name === currentShop) return true;
+    else return false;
+  };
+
   return (
     <section className={css.shops_section}>
       <h2 className={css.shops_title}>Shops</h2>
       <ul className={css.shops_list}>
         {shops.map((shop) => (
           <li
+            key={shop._id}
             className={
               isCurrent(shop.name) ? css.shop_item_active : css.shop_item
             }
-            key={shop.id}
-            onClick={() => onShop(shop.name)}
+            onClick={() => onShopClick(shop.name)}
           >
             <p className={css.shop_name}>{shop.name}</p>
           </li>
