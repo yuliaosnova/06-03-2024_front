@@ -1,12 +1,3 @@
-.drug_item {
-
-}
-
-.image{
-	/* width: 250px; */
-	/* height: 100px; */
-}
-
 .drug_info {
 	display: flex;
 	justify-content: space-between;

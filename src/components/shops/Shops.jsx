@@ -1,10 +1,19 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import * as api from "../../servises/api";
 import css from "./Shops.module.css";
+import { useShop } from "../Context/ShopContext";
+// import {
+//   currentShop,
+//   changeCurrentShop,
+// } from "../../components/Context/ShopContext";
+// import ShopContext from "../../components/Context/ShopContext"
 
 const Shops = () => {
   const [shops, setShops] = useState([]);
-  const [currentShop, setCurrentShop] = useState(null);
+//   const [currentShop, setCurrentShop] = useState(null);
+const { currentShop, changeCurrentShop } = useShop();
+//   const [currentShop, changeCurrentShop] = useContext(ShopContext);
+  console.log("current shop: ", currentShop)
 
   useEffect(() => {
     api
@@ -19,7 +28,8 @@ const Shops = () => {
   }, []);
 
   const onShopClick = (name) => {
-    setCurrentShop(name);
+   //  setCurrentShop(name);
+	changeCurrentShop(name)
   };
 
   const isCurrent = (name) => {
