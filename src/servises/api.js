@@ -12,27 +12,22 @@ export async function fetchDrugs() {
 
 export async function fetchDrugsByIds(ids) {
   const response = await axios.post(`/drugs`, ids);
-  console.log("drugsById:", response);
-  return response;
+  return response.data;
 }
 
 export async function fetchOrders() {
   const response = await axios.get(`/orders`);
-  console.log("orders:", response);
   return response;
 }
 
-export async function fetchOrderByCustomer(username) {
-  const response = await axios.get(`/orders/${username}`);
-  console.log("orders:", response);
-  return response;
+export async function fetchOrderByCustomer(email) {
+  const response = await axios.get(`/orders/customer/${email}`);
+  return response.data;
 }
 
 export async function addOrder(order) {
   try {
     const response = await axios.post("/orders", order);
-    console.log("added! ", response);
-    //  return response.data;
   } catch (error) {
     console.log(error.message);
   }

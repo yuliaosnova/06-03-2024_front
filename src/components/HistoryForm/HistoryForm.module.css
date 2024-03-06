@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 330px;
+  margin: 0 auto;
+}
+
+.label {
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+}
+
+.button {
+  background-color: var(--active-bg);
+  color: var(--secondary-txt-cl);
+  border: none;
+  padding: 5px;
+}
