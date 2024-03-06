@@ -20,12 +20,15 @@
 }
 
 .heart_icon {
-  fill: transparent;
-  stroke: var(--accent-cl);
+  color: var(--secondary-bg);
+  width: 30px;
+  height: 20px;
 }
 
 .heart_icon_fav {
-  fill: var(--accent-cl);
+  color: var(--accent-cl);
+  width: 30px;
+  height: 20px;
 }
 
 .add_btn {

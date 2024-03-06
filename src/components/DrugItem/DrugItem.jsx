@@ -1,10 +1,11 @@
+import { FaHeart } from "react-icons/fa";
 import { isFavorite } from "../../utils/isFavorite";
 import { isInCart } from "../../utils/isInCart";
 import { setAddButtonText } from "../../utils/setAddBtnText";
-import sprite from "../../assets/sprite.svg";
 import { useCart } from "../Context/CartContext";
 import { useShop } from "../Context/ShopContext";
 import css from "./DrugItem.module.css";
+
 
 const DrugItem = ({ drug, favorites, onFavClick }) => {
   const { currentShop } = useShop();
@@ -44,17 +45,11 @@ const DrugItem = ({ drug, favorites, onFavClick }) => {
             className={css.fav_btn}
             onClick={() => onFavClick(drug._id)}
           >
-            <svg
-              width={30}
-              height={20}
-              className={
+				<FaHeart className={
                 isFavorite(drug._id, favorites)
                   ? css.heart_icon_fav
                   : css.heart_icon
-              }
-            >
-              <use href={`${sprite}#icon-heart`}></use>
-            </svg>
+              } />
           </button>
           <button
             type="button"
