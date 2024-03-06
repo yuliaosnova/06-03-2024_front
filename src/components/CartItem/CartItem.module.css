@@ -1,0 +1,23 @@
+.cart_item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid var(--secondary-bg);
+}
+
+.delete_icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--main-txt-cl);
+  transition: var(--animation);
+
+  &:hover {
+    fill: var(--accent-cl);
+  }
+}
+
+.product_name {
+  font-weight: 600;
+}

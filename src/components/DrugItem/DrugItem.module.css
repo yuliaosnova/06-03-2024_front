@@ -4,6 +4,11 @@
 	margin-bottom: 5px;
 }
 
+.drug_bottom{
+	padding: 5px;
+	border: 1px solid var(--secondary-bg);
+}
+
 .drug_buttons {
 	display: flex;
 	justify-content: space-between;

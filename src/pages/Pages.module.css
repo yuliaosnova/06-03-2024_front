@@ -2,3 +2,26 @@
 	display: flex;
 	justify-content: space-evenly;
 }
+
+.shopping_cart{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.form {
+	display: flex;
+	gap: 50px;
+ 
+ }
+
+ .right_block {
+	overflow-y: scroll;
+	position: relative;
+	height: 450px;
+ }
+
+ .form_submit {
+	display: flex;
+	justify-content: space-between;
+ }

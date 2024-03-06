@@ -6,27 +6,20 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useLocalStorage("shoppingCart", []);
 
+  const getQuantity = (id) => {
+    return cartItems.find((item) => item.id === id)?.quantity || 1;
+  };
+
   const addCartItem = (item) => {
     setCartItems((prev) => [...prev, item]);
   };
 
-  const increaseQuantity = (id) => {
+  const changeQuantity = (id, number) => {
     setCartItems((prevState) =>
       prevState.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+        item.id === id ? { ...item, quantity: number } : item
       )
     );
-  };
-
-  const decreaseQuantity = (id) => {
-    setCartItems((prevState) => {
-      const itemToUpdate = prevState.find((item) => item.id === id);
-      if (!itemToUpdate || itemToUpdate.quantity === 1) return prevState;
-
-      return prevState.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity - 1 } : item
-      );
-    });
   };
 
   const removeCartItem = (id) => {
@@ -37,10 +30,10 @@ export const CartProvider = ({ children }) => {
     <CartContext.Provider
       value={{
         cartItems,
+        getQuantity,
         addCartItem,
         removeCartItem,
-        increaseQuantity,
-        decreaseQuantity,
+        changeQuantity,
       }}
     >
       {children}

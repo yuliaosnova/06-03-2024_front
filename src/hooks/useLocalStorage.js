@@ -8,8 +8,10 @@ export default function useLocalStorage(key, defaultValue) {
   useEffect(() => {
     window.localStorage.setItem(key, JSON.stringify(value));
   }, [key, value]);
-  return [value, setValue];
+
+  const removeValue = () => {
+    window.localStorage.removeItem(key);
+  };
+
+  return [value, setValue, removeValue];
 }
-
-
-//const [theme, setTheme] = useLocalStorage("theme", "light")

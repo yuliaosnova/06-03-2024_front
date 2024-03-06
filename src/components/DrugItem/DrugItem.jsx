@@ -34,7 +34,8 @@ const DrugItem = ({ drug, favorites, onFavClick }) => {
         src={drug.image}
         alt={drug.name}
       ></img>
-      <div className={css.drug_info}>
+		<div className={css.drug_bottom}>
+		<div className={css.drug_info}>
         <p>{drug.name}</p>
         <p>{drug.price} грн</p>
       </div>
@@ -66,6 +67,8 @@ const DrugItem = ({ drug, favorites, onFavClick }) => {
           {setAddButtonText(drug._id, cartItems)}
         </button>
       </div>
+		</div>
+      
     </li>
   );
 };

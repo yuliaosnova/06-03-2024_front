@@ -43,10 +43,10 @@ p {
 }
 
 ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
- }
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 a {
   color: currentColor;
@@ -60,8 +60,8 @@ img {
 }
 
 button {
-	cursor: pointer;
- }
+  cursor: pointer;
+}
 
 .active {
   background-color: var(--active-bg);
