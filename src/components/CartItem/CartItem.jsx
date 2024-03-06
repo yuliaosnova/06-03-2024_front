@@ -18,7 +18,7 @@ const CartItem = ({ item }) => {
       ></img>
       <div className={css.cart_info}>
         <p className={css.product_name}>{item.name}</p>
-        <p>{item.price} грн</p>
+        <p>{item.price} ₴</p>
         <input
           type="number"
           value={getQuantity(item.id)}

@@ -29,46 +29,45 @@ const DrugItem = ({ drug, favorites, onFavClick }) => {
   return (
     <li className={css.drug_item}>
       <img
-        width={270}
+        width={230}
         className={css.drug_image}
         src={drug.image}
         alt={drug.name}
       ></img>
-		<div className={css.drug_bottom}>
-		<div className={css.drug_info}>
-        <p>{drug.name}</p>
-        <p>{drug.price} грн</p>
-      </div>
-      <div className={css.drug_buttons}>
-        <button
-          type="button"
-          className={css.fav_btn}
-          onClick={() => onFavClick(drug._id)}
-        >
-          <svg
-            width={30}
-            height={20}
-            className={
-              isFavorite(drug._id, favorites)
-                ? css.heart_icon_fav
-                : css.heart_icon
+      <div className={css.drug_bottom}>
+        <div className={css.drug_info}>
+          <p>{drug.name}</p>
+          <p>{drug.price} ₴</p>
+        </div>
+        <div className={css.drug_buttons}>
+          <button
+            type="button"
+            className={css.fav_btn}
+            onClick={() => onFavClick(drug._id)}
+          >
+            <svg
+              width={30}
+              height={20}
+              className={
+                isFavorite(drug._id, favorites)
+                  ? css.heart_icon_fav
+                  : css.heart_icon
+              }
+            >
+              <use href={`${sprite}#icon-heart`}></use>
+            </svg>
+          </button>
+          <button
+            type="button"
+            className={css.add_btn}
+            onClick={() =>
+              onAddClick(drug._id, drug.name, drug.price, drug.image)
             }
           >
-            <use href={`${sprite}#icon-heart`}></use>
-          </svg>
-        </button>
-        <button
-          type="button"
-          className={css.add_btn}
-          onClick={() =>
-            onAddClick(drug._id, drug.name, drug.price, drug.image)
-          }
-        >
-          {setAddButtonText(drug._id, cartItems)}
-        </button>
+            {setAddButtonText(drug._id, cartItems)}
+          </button>
+        </div>
       </div>
-		</div>
-      
     </li>
   );
 };

@@ -7,7 +7,7 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useLocalStorage("shoppingCart", []);
 
   const getQuantity = (id) => {
-    return cartItems.find((item) => item.id === id)?.quantity || 1;
+    return cartItems.find((item) => item.id === id)?.quantity || 0;
   };
 
   const addCartItem = (item) => {

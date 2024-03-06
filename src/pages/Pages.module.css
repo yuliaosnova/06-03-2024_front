@@ -25,3 +25,15 @@
 	display: flex;
 	justify-content: space-between;
  }
+
+ .amount {
+	font-weight: 600;
+ }
+
+.submit_btn {
+	background-color: var(--active-bg);
+	color: var(--secondary-txt-cl);
+	border: none;
+	padding: 5px;
+	font-size: 16px;
+}

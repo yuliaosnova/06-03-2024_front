@@ -62,8 +62,8 @@ const ShoppingCartPage = () => {
           <div className={css.right_block}>
             <CartForm />
             <div className={css.form_submit}>
-              <p>Total price: {total}</p>
-              <button type="submit">Submit</button>
+              <p className={css.amount}>Total price: {total} ₴</p>
+              <button type="submit" className={css.submit_btn}>Submit</button>
             </div>
           </div>
         ) : (
