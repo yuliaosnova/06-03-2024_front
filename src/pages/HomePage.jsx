@@ -1,5 +1,5 @@
 import DrugsList from "../components/DrugsList/DrugsList";
-import Shops from "../components/Shops/Shops";
+import Shops from "../components/shops/Shops";
 import css from "./Pages.module.css";
 
 const HomePage = () => {
