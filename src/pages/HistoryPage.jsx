@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import * as api from "../servises/api";
+import { getNewOrders } from "../utils/getOrderedDrugs";
 import HistoryForm from "../components/HistoryForm/HistoryForm";
 import HistoryList from "../components/HistoryList/HistoryList";
-import { getNewOrders } from "../utils/getOrderedDrugs";
-import css from './Pages.module.css'
+import css from "./Pages.module.css";
 
 const HistoryPage = () => {
   const [email, setEmail] = useState(null);

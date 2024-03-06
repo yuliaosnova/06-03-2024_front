@@ -1,46 +1,45 @@
 .container {
-	display: flex;
-	justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.shopping_cart{
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.shopping_cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .form {
-	display: flex;
-	gap: 50px;
- 
- }
+  display: flex;
+  gap: 50px;
+}
 
- .right_block {
-	overflow-y: scroll;
-	position: relative;
-	height: 450px;
- }
+.right_block {
+  overflow-y: scroll;
+  position: relative;
+  height: 450px;
+}
 
- .form_submit {
-	display: flex;
-	justify-content: space-between;
- }
+.form_submit {
+  display: flex;
+  justify-content: space-between;
+}
 
- .amount {
-	font-weight: 600;
- }
+.amount {
+  font-weight: 600;
+}
 
 .submit_btn {
-	background-color: var(--active-bg);
-	color: var(--secondary-txt-cl);
-	border: none;
-	padding: 5px;
-	font-size: 16px;
+  background-color: var(--active-bg);
+  color: var(--secondary-txt-cl);
+  border: none;
+  padding: 5px;
+  font-size: 16px;
 }
 
 .history_page {
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
 }

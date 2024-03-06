@@ -1,6 +1,6 @@
+import { MdDelete } from "react-icons/md";
 import { useCart } from "../Context/CartContext";
 import css from "./CartItem.module.css";
-import { MdDelete } from "react-icons/md";
 
 const CartItem = ({ item }) => {
   const { getQuantity, changeQuantity, removeCartItem } = useCart();

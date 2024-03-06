@@ -1,20 +1,20 @@
 .sort_container {
-	margin-bottom: 10px;
- }
- 
- .sort_btn {
-	background-color: transparent;
-	border: 1px solid var(--accent-cl);
-	display: flex;
-	gap: 5px;
-	color: var(--accent-cl);
-	transition: var(--anamation);
- 
-	&:hover {
-	  background-color: var(--secondary-bg);
-	}
- }
- 
- .icon {
-	fill: var(--accent-cl);
- }
+  margin-bottom: 10px;
+}
+
+.sort_btn {
+  background-color: transparent;
+  border: 1px solid var(--accent-cl);
+  display: flex;
+  gap: 5px;
+  color: var(--accent-cl);
+  transition: var(--anamation);
+
+  &:hover {
+    background-color: var(--secondary-bg);
+  }
+}
+
+.icon {
+  fill: var(--accent-cl);
+}

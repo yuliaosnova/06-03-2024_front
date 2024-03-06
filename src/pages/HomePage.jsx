@@ -1,7 +1,6 @@
-
 import DrugsList from "../components/DrugsList/DrugsList";
 import Shops from "../components/Shops/Shops";
-import css from "./Pages.module.css"
+import css from "./Pages.module.css";
 
 const HomePage = () => {
   return (

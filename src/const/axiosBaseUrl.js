@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const axiosBaseUrl= "http://localhost:3002/api";
+const axiosBaseUrl = "https://zero6-03-2024-back-dojc.onrender.com/api";
 
-axios.defaults.baseURL = axiosBaseUrl; 
+axios.defaults.baseURL = axiosBaseUrl;
 
 export default axios;

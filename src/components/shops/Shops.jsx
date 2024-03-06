@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import * as api from "../../servises/api";
-import css from "./Shops.module.css";
 import { useShop } from "../Context/ShopContext";
+import css from "./Shops.module.css";
 
 const Shops = () => {
   const [shops, setShops] = useState([]);

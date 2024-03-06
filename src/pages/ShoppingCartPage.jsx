@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import UserForm from "../components/UserForm/UserForm";
-import css from "./Pages.module.css";
 import CartForm from "../components/CartForm/CartForm";
 import { useCart } from "../components/Context/CartContext";
 import { useShop } from "../components/Context/ShopContext";
 import useLocalStorage from "../hooks/useLocalStorage";
 import * as api from "../servises/api";
-import "react-toastify/dist/ReactToastify.css";
-import { toast } from "react-toastify";
 import { formInitialValues } from "../const/formInitialValue";
+import css from "./Pages.module.css";
 
 const ShoppingCartPage = () => {
   const { cartItems } = useCart();

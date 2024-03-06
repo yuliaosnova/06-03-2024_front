@@ -1,10 +1,8 @@
-import React, { Suspense } from "react";
-import css from "./Layout.module.css";
+import { Suspense } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
-import { toast } from "react-toastify";
-import { DNA } from "react-loader-spinner";
+import css from "./Layout.module.css";
 
 const Layout = () => {
   return (
@@ -23,19 +21,7 @@ const Layout = () => {
         </nav>
       </header>
       <main>
-        <Suspense
-          fallback={
-				<p>Loading...</p>
-            // <DNA
-            //   visible={true}
-            //   height="80"
-            //   width="80"
-            //   ariaLabel="dna-loading"
-            //   wrapperStyle={{}}
-            //   wrapperClass="dna-wrapper"
-            // />
-          }
-        >
+        <Suspense fallback={<p>Loading...</p>}>
           <Outlet />
         </Suspense>
       </main>

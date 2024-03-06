@@ -1,7 +1,7 @@
-import css from "./SortComponent.module.css";
 import { GoSortAsc } from "react-icons/go";
+import css from "./SortComponent.module.css";
 
-const SortComponent = ({toggleIsSorted}) => {
+const SortComponent = ({ toggleIsSorted }) => {
   return (
     <div className={css.sort_container}>
       <button

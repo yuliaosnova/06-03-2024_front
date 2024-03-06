@@ -1,6 +1,6 @@
 import { useCart } from "../Context/CartContext";
-import css from "./CartForm.module.css";
 import CartItem from "../CartItem/CartItem";
+import css from "./CartForm.module.css";
 
 const CartForm = () => {
   const { cartItems } = useCart();

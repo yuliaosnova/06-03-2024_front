@@ -1,20 +1,20 @@
 import { useEffect, useState, useMemo } from "react";
-import * as api from "../../servises/api";
-import css from "./DrugsList.module.css";
-import DrugItem from "../DrugItem/DrugItem";
 import useLocalStorage from "../../hooks/useLocalStorage";
 import { sortByPrice } from "../../utils/SortByPrice";
-import SortComponent from "../Sort/SortComponent";
 import { replaceFavorites } from "../../utils/replaceFavorites";
+import * as api from "../../servises/api";
+import SortComponent from "../Sort/SortComponent";
+import DrugItem from "../DrugItem/DrugItem";
+import css from "./DrugsList.module.css";
 
 const DrugsList = () => {
   const [drugs, setDrugs] = useState([]);
   const [favorites, setFavorites] = useLocalStorage("favorites", []);
   const [isSorted, setIsSorted] = useState(false);
-  console.log('render Drug list')
 
   useEffect(() => {
-    api.fetchDrugs()
+    api
+      .fetchDrugs()
       .then((response) => setDrugs(response.data.drugs))
       .catch((error) => console.error("Error fetching drugs:", error));
   }, []);
@@ -57,4 +57,3 @@ const DrugsList = () => {
 };
 
 export default DrugsList;
-
