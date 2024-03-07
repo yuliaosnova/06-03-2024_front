@@ -9,11 +9,13 @@ import useLocalStorage from "../hooks/useLocalStorage";
 import * as api from "../servises/api";
 import { formInitialValues } from "../const/formInitialValue";
 import css from "./Pages.module.css";
+import { useNavigate } from "react-router-dom";
 
 const ShoppingCartPage = () => {
   const { cartItems } = useCart();
   const { currentShop } = useShop();
   const [total, setTotal] = useState();
+  const navigate = useNavigate();
 
   const [formData, setFormData, removeValue] = useLocalStorage(
     "formData",
@@ -48,6 +50,7 @@ const ShoppingCartPage = () => {
       .then(() => {
         toast.success("We`ve got your order and will connect with your soon!");
         removeValue();
+        navigate("/");
       })
       .catch((error) => {
         toast.error("Something went wrong :(");
@@ -63,7 +66,9 @@ const ShoppingCartPage = () => {
             <CartForm />
             <div className={css.form_submit}>
               <p className={css.amount}>Total price: {total} ₴</p>
-              <button type="submit" className={css.submit_btn}>Submit</button>
+              <button type="submit" className={css.submit_btn}>
+                Submit
+              </button>
             </div>
           </div>
         ) : (
