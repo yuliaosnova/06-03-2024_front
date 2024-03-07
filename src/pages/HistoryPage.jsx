@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import * as api from "../servises/api";
 import { getNewOrders } from "../utils/getOrderedDrugs";
 import HistoryForm from "../components/HistoryForm/HistoryForm";
@@ -28,6 +30,7 @@ const HistoryPage = () => {
           setOrderedDrugs(drugsResponse);
         }
       } catch (error) {
+        toast.error("nothing found");
         console.log(error);
       }
     };
