@@ -18,6 +18,4 @@ The Medicine Delivery app should consist of 3 pages:
 	The cart is saved in local storage.
 
 - history page
-	Users can find their orders on this page using their email.
-
-
+	Users can find their orders on this page using their email
