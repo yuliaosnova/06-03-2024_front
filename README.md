@@ -1,6 +1,6 @@
 # React + Vite
 how to run the app:
-npm install - install dependencies
+npm install - install dependencies,
 npm run dev - start the development server
 
 backend: https://github.com/yuliaosnova/06-03-2024_back
