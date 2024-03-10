@@ -1,8 +1,8 @@
 import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
+import HomePage from "./pages/HomePage";
 
-const Home = lazy(() => import("./pages/HomePage"));
 const ShoppingCart = lazy(() => import("./pages/ShoppingCartPage"));
 const History = lazy(() => import("./pages/HistoryPage"));
 
@@ -11,10 +11,10 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          <Route index element={<HomePage />} />
           <Route path="shopping-cart" element={<ShoppingCart />} />
           <Route path="history" element={<History />}></Route>
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<HomePage />} />
         </Route>
       </Routes>
     </>
